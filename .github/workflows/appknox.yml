@@ -41,7 +41,6 @@ jobs:
         run: ./gradlew build
 
       - name: Appknox GitHub action
-        if: ${{ secrets.APPKNOX_ACCESS_TOKEN != '' && github.event.pull_request.head.repo.fork != true }}
         uses: appknox/appknox-github-action@b7d2bfb2321d5544e97bffcba48557234ab953a4
         with:
           appknox_access_token: ${{ secrets.APPKNOX_ACCESS_TOKEN }}
