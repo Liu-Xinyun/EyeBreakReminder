@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="#F5F9F8">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="👀 护眼提醒" android:textStyle="bold" android:textSize="30sp"
+            android:textColor="#193D36" android:layout_marginTop="22dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="每隔一段亮屏时间，让视线离开屏幕。"
+            android:textSize="14sp" android:textColor="#6B817B" android:layout_marginTop="8dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="26dp" android:padding="20dp"
+            android:background="@drawable/card_bg" android:orientation="vertical">
+            <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="○ 护眼监测未开启" android:textColor="#20594C"
+                android:textSize="18sp" android:textStyle="bold" />
+            <TextView android:id="@+id/countdown" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="12dp"
+                android:text="启动后自动监测亮屏时间" android:textColor="#4E6C64"
+                android:textSize="14sp" />
+            <Button android:id="@+id/toggleButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="18dp"
+                android:text="开始监测" android:textAllCaps="false" />
+            <Button android:id="@+id/testButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="立即测试弹窗"
+                android:textAllCaps="false" />
+            <Button android:id="@+id/testLockButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="测试严格锁屏（20秒）"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:padding="20dp"
+            android:background="@drawable/card_bg" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="护眼模式" android:textSize="16sp" android:textStyle="bold"
+                android:textColor="#193D36" />
+            <RadioGroup android:id="@+id/modeGroup" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:layout_marginTop="8dp">
+                <RadioButton android:id="@+id/popupMode" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="普通模式 · 到时弹窗"
+                    android:textColor="#193D36" />
+                <RadioButton android:id="@+id/strictMode" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="严格模式 · 自动锁屏20秒"
+                    android:textColor="#193D36" />
+            </RadioGroup>
+            <TextView android:id="@+id/modeExplanation" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:textColor="#4E6C64" android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:padding="20dp"
+            android:background="@drawable/card_bg" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="提醒间隔（分钟）" android:textSize="16sp" android:textStyle="bold"
+                android:textColor="#193D36" />
+            <EditText android:id="@+id/minutesField" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="number"
+                android:hint="20" android:textSize="20sp" android:singleLine="true" />
+            <Button android:id="@+id/saveButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="保存间隔"
+                android:textAllCaps="false" />
+            <CheckBox android:id="@+id/autoBoot" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="5dp"
+                android:text="开机后自动恢复监测" android:textColor="#193D36" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:padding="20dp"
+            android:background="@drawable/card_bg" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="权限设置" android:textSize="16sp" android:textStyle="bold"
+                android:textColor="#193D36" />
+            <TextView android:id="@+id/permissionStatus" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="检查权限中…" android:textSize="13sp" android:textColor="#4E6C64" />
+            <Button android:id="@+id/overlayButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="10dp"
+                android:text="授权显示在其他应用上层" android:textAllCaps="false" />
+            <Button android:id="@+id/adminButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="授权设备管理员锁屏（仅严格模式）" android:textAllCaps="false" />
+            <Button android:id="@+id/notifyButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="授权通知（建议）"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:layout_marginBottom="24dp"
+            android:text="仅累计亮屏时间；短暂锁屏不超过20秒则保留累计时长，超过20秒重置。\n严格模式到时请求锁屏；不能阻止用户提前解锁或自动解锁，可能要求输入设备密码。\n不读取屏幕内容，不联网、不上传使用记录。\n若被省电策略强制停止，请允许后台运行。"
+            android:lineSpacingExtra="5dp" android:textColor="#6B817B" android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

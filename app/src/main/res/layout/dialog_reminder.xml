@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingLeft="24dp" android:paddingRight="24dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/overlay_bg" android:elevation="15dp"
+        android:orientation="vertical" android:padding="26dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="🌿" android:gravity="center" android:textSize="48sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="让眼睛休息一下" android:textStyle="bold" android:textSize="23sp"
+            android:textColor="#193D36" android:gravity="center" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/reminderHeadline" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:text="已经连续使用手机 20 分钟啦" android:textColor="#365A50"
+            android:textSize="16sp" android:gravity="center" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="看向约 6 米以外，保持至少 20 秒。"
+            android:textSize="14sp" android:textColor="#71857F" android:gravity="center" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:orientation="horizontal">
+            <Button android:id="@+id/snoozeButton" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="5分钟后提醒" android:textAllCaps="false" />
+            <Button android:id="@+id/gotItButton" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginLeft="6dp" android:text="知道了" android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="device_admin_description">仅用于在严格护眼模式到时锁定屏幕，不读取个人数据、不更改密码。随时可在系统设置中撤销。</string>
+</resources>
